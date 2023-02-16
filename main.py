@@ -1,25 +1,41 @@
-import pymongo
+from sensor.logger import logging
+from sensor.exception import SensorException
+import os,sys
+from sensor.utils import get_collecton_dataframe
+from sensor.entity import config_entity
+from sensor.component.dataingestion import DATA_INGESTION
+from sensor.component.data_validation import DATA_VALIDATION
 
-# Provide the mongodb localhost url to connect python to mongodb.
-client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
+        
+if __name__=="__main__":
 
-# Database Name
-dataBase = client["neurolabDB"]
+   try:
+      training_pipeline_config = config_entity.TRAINING_PIPELINE_CONGIF()
 
-# Collection  Name
-collection = dataBase['Products']
+      #data ingestion
+      data_ingestion_config  = config_entity.DATA_INGESTION_CONFIG(trainingpipeline_config=training_pipeline_config)
+      print(data_ingestion_config.to_dic())
+      data_ingestion = DATA_INGESTION(data_ingestion_config=data_ingestion_config)
+      data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
 
-# Sample data
-d = {'companyName': 'iNeuron',
-     'product': 'Affordable AI',
-     'courseOffered': 'Machine Learning with Deployment'}
+    #data validation
+      data_validation_config = config_entity.DATA_VALIDATION_CONFIG(trainingpipeline_config=training_pipeline_config)
+      data_validation = DATA_VALIDATION(data_validation_config=data_validation_config,
+                        data_ingestion_artifact=data_ingestion_artifact)
 
-# Insert above records in the collection
-rec = collection.insert_one(d)
+      data_validation_artifact = data_validation.initiate_data_validation()
 
-# Lets Verify all the record at once present in the record with all the fields
-all_record = collection.find()
 
-# Printing all records present in the collection
-for idx, record in enumerate(all_record):
-     print(f"{idx}: {record}")
+
+
+
+ 
+
+      
+   except Exception as e:
+      raise SensorException(e, sys)
+   
+
+
+
+     

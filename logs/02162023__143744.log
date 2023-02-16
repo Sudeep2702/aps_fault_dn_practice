@@ -1,0 +1,22 @@
+[ 2023-02-16 14:37:46,072 ] 21 root - INFO - exporting colleciton to pd
+[ 2023-02-16 14:37:46,072 ] 10 root - INFO - reading file from database
+[ 2023-02-16 14:37:49,552 ] 12 root - INFO - found comlumns : {df.columns}
+[ 2023-02-16 14:37:49,553 ] 14 root - INFO - dropping the column : _id
+[ 2023-02-16 14:37:49,758 ] 16 root - INFO - found columns and rows in df :(36188, 171)
+[ 2023-02-16 14:37:49,758 ] 25 root - INFO - save the data in feature folder
+[ 2023-02-16 14:37:50,297 ] 31 root - INFO - Save data in feature store
+[ 2023-02-16 14:37:56,148 ] 17 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-16 14:37:56,148 ] 129 root - INFO - Reading base dataframe
+[ 2023-02-16 14:37:59,005 ] 132 root - INFO - Replace na value in base df
+[ 2023-02-16 14:37:59,005 ] 134 root - INFO - Drop null values colums from base df
+[ 2023-02-16 14:37:59,938 ] 43 root - INFO - selecting column name which contains null above to 0.7
+[ 2023-02-16 14:37:59,939 ] 45 root - INFO - Columns to drop: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[ 2023-02-16 14:38:00,083 ] 136 root - INFO - Reading train dataframe
+[ 2023-02-16 14:38:00,484 ] 138 root - INFO - Reading test dataframe
+[ 2023-02-16 14:38:00,589 ] 140 root - INFO - Drop null values colums from train df
+[ 2023-02-16 14:38:00,601 ] 43 root - INFO - selecting column name which contains null above to 0.7
+[ 2023-02-16 14:38:00,601 ] 45 root - INFO - Columns to drop: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[ 2023-02-16 14:38:00,612 ] 142 root - INFO - Drop null values colums from test df
+[ 2023-02-16 14:38:00,616 ] 43 root - INFO - selecting column name which contains null above to 0.7
+[ 2023-02-16 14:38:00,617 ] 45 root - INFO - Columns to drop: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[ 2023-02-16 14:38:00,619 ] 145 root - INFO - Is all required columns present in train df

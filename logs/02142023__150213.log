@@ -1,0 +1,4 @@
+[ 2023-02-14 15:02:14,643 ] 9 root - INFO - reading file from database
+[ 2023-02-14 15:02:18,022 ] 11 root - INFO - found comlumns : {df.columns}
+[ 2023-02-14 15:02:18,023 ] 13 root - INFO - dropping the column : _id
+[ 2023-02-14 15:02:18,222 ] 15 root - INFO - found columns and rows in df :(36188, 171)
