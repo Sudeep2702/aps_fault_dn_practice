@@ -1,7 +1,0 @@
-[ 2023-02-15 10:47:09,299 ] 21 root - INFO - exporting colleciton to pd
-[ 2023-02-15 10:47:09,299 ] 9 root - INFO - reading file from database
-[ 2023-02-15 10:47:12,781 ] 11 root - INFO - found comlumns : {df.columns}
-[ 2023-02-15 10:47:12,782 ] 13 root - INFO - dropping the column : _id
-[ 2023-02-15 10:47:12,976 ] 15 root - INFO - found columns and rows in df :(36188, 171)
-[ 2023-02-15 10:47:12,977 ] 25 root - INFO - save the data in feature folder
-[ 2023-02-15 10:47:13,520 ] 31 root - INFO - Save data in feature store
